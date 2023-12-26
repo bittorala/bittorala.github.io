@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Bittor Alaña Blog</title>
+        <link>https://bittorala.github.io/blog</link>
+        <description>Bittor Alaña Blog</description>
+        <lastBuildDate>Wed, 18 Oct 2023 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Welcome]]></title>
+            <link>https://bittorala.github.io/blog/welcome</link>
+            <guid>https://bittorala.github.io/blog/welcome</guid>
+            <pubDate>Wed, 18 Oct 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome to my blog! I am Bittor Alaña, a  year-old]]></description>
+            <content:encoded><![CDATA[<p>Welcome to my blog! I am Bittor Alaña, a <span>26</span> year-old
+Software Architect from Bilbao, Basque Country. I work for Kurago
+Software, a member of Bystronic Group. We are specialists in the
+sheet metal industry, and are striving to develop a smart factory
+that will fulfill the vision of Industry 4.0.</p><p>This web is simply a little portfolio I have made myself, to
+showcase who I am and what my interests are. I hope I can make
+some contributions from time to this blog from time to time 😊.</p><p>My passions include (but are not limited to):</p><ul><li>Hiking in the mountain.</li><li>Kickboxing and basketball.</li><li>Reading.</li><li>Cooking.</li><li>Coding and problem solving.</li><li>Sipping a coffee or glass of wine with friends and family.</li></ul><p>Computer Science-wise, I am very keen on Data Science, Data Analytics,
+Cryptography, Machine Learning, and backend development.</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
