@@ -4,8 +4,11 @@ import clsx from "clsx";
 
 function Project(props) {
   return (
-    <div class="project-card" style={{ flex: 1 }}>
-      <div class="card">
+    <div
+      class="project-card"
+      style={{ flex: 1, minHeight: "100%", padding: "1rem" }}
+    >
+      <div class="card" style={{ minHeight: "inherit" }}>
         <div class="card__header">
           <h3>{props.name}</h3>
         </div>
@@ -54,7 +57,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div class="hero">
+    <div class="hero" style={{ alignItems: 'stretch' }}>
       {projects.map((project) => (
         <Project {...project} />
       ))}

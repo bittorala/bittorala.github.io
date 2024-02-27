@@ -44,3 +44,9 @@
 .badge {
   margin-right: 8px;
 }
+
+@media (max-width: 800px) {
+  .hero > .container {
+    display: block;
+  }
+}
