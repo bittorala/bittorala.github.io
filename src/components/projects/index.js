@@ -23,12 +23,12 @@ function Project(props) {
         <div class="card__footer">
           <button class="button button--secondary button--block">
             <a
-              href={props.repo}
+              href={props.repo ?? props.doi}
               className={clsx("button-link", styles.repoButton)}
               target="_blank"
               rel="noopener noreferrer"
             >
-              See repo
+              { !!props.repo ? "See repo" : "See DOI" }
             </a>
           </button>
         </div>
@@ -55,12 +55,36 @@ const projects = [
   },
 ];
 
+const papers = [
+    {
+        name: "StringENT test suite: ENT battery revisited for efficient P value computation",
+        description: "Journal of Cryptographic Engineering",
+        keywords: ["Cryptography", "Randomness"],
+        doi: "http://dx.doi.org/10.1007/s13389-023-00313-5"
+    },
+    {
+        name: "Further analysis of the statistical independence of the NIST SP 800-22 randomness tests",
+        description: "Applied Mathematics and Computation",
+        keywords: ["Cryptography", "Randomness", "NIST"],
+        doi: "https://doi.org/10.1016/j.amc.2023.128222"
+    }];
+
+
 export default function Projects() {
   return (
-    <div class="hero" style={{ alignItems: 'stretch' }}>
-      {projects.map((project) => (
-        <Project {...project} />
-      ))}
-    </div>
+    <section>
+      <h2>Projects</h2>
+      <div className={clsx("hero", styles.hero)}>
+        {projects.map((project) => (
+          <Project {...project} />
+        ))}
+      </div>
+      <h2>Research papers</h2>
+      <div className={clsx("hero", styles.hero)}>
+        {papers.map((paper) => (
+          <Project {...paper} />
+        ))}
+      </div>
+    </section>
   );
 }
