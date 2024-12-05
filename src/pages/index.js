@@ -1,82 +1,108 @@
-import React from "react";
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Layout from "@theme/Layout";
-import Projects from "../components/projects";
+import React from 'react';
+import { motion } from 'framer-motion';
+import Navigation from '../components/navigationHeader/index';
+import styles from './index.module.css';
 
-import styles from "./index.module.css";
-
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className={clsx("hero hero--shadow", styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}></div>
+const ProjectCard = ({ title, description, tags, href }) => (
+  <motion.div
+    whileHover={{ scale: 1.02 }}
+    className={styles.card}
+  >
+    <a href={href} className={styles.cardLink}>
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <div className={styles.tagContainer}>
+        {tags.map((tag, index) => (
+          <span key={index} className={styles.tag}>
+            {tag}
+          </span>
+        ))}
       </div>
-    </header>
-  );
-}
+    </a>
+  </motion.div>
+);
 
-function HeroSection(props) {
+const Section = ({ title, children }) => (
+  <motion.section
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className={styles.section}
+  >
+    <h2>{title}</h2>
+    {children}
+  </motion.section>
+);
+
+export default function HomePage() {
+  const projects = [
+    {
+      title: "StringENT",
+      description: "A modified version of ENT, as a benchmark to assess non-randomness qualities of PRNGs with a blazingly fast set of tests that probe for statistical weaknesses",
+      tags: ["Cryptography", "Security", "Randomness"],
+      href: "#"
+    },
+    {
+      title: "EASTLite",
+      description: "A lightweight Scene Text Detector based on EAST and MobileNets for ultra-fast text detection",
+      tags: ["Computer Vision", "AI", "Efficiency"],
+      href: "#"
+    }
+  ];
+
+const papers = [
+  {
+      title: "StringENT test suite: ENT battery revisited for efficient P value computation",
+      description: "Journal of Cryptographic Engineering",
+      tags: ["Cryptography", "Randomness"],
+      href: "http://dx.doi.org/10.1007/s13389-023-00313-5"
+  },
+  {
+      title: "Further analysis of the statistical independence of the NIST SP 800-22 randomness tests",
+      description: "Applied Mathematics and Computation",
+      tags: ["Cryptography", "Randomness", "NIST"],
+      href: "https://doi.org/10.1016/j.amc.2023.128222"
+  }];
+
+
   return (
-    <section
-      className={clsx("hero hero--primary hero-section", {
-        [styles.primaryHero]: props.parity,
-        [styles.secondaryHero]: !props.parity,
-      })}
-    >
-      <div
-        className={clsx("container", {
-          [styles.reverseFlex]: props.parity,
-        })}
+    <>
+    <Navigation />
+    <div className={styles.container}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        className={styles.header}
       >
-        <p className={clsx(styles.heroText)}>{props.text}</p>
-        <img src={props.url} />
-      </div>
-    </section>
-  );
-}
+        <h1>Bittor Alaña - Software Architect</h1>
+        <p className={styles.intro}>
+          I love problem solving, figuring out efficient, smart and simple ways of tackling real-world problems. 
+          As a Mathematics and Computer Science graduate, I am an enthusiast of tech as a driver for humankind's 
+          prosperity and advancement.
+        </p>
+        <p className={styles.description}>
+          As a Software Architect at Kurago, I help develop a Smart Factory solution that enables Bystronic's 
+          customers to integrate their industrial processes end to end.
+        </p>
+        <p className={styles.description}>
+          We have an extensive cloud experience, focusing mainly on Azure to develop SaaS offerings, and also 
+          develop very powerful on-premise solutions for our most privacy-oriented customers. My tech stack is 
+          mainly comprised of C#, Python, SQL and Typescript.
+        </p>
+      </motion.div>
 
-const firstText = `I love problem solving, figuring out efficient,
-smart and simple ways of tackling issues. As a Mathematics and Computer
-Science graduate, I am an enthusiast of tech as a driver for humankind's 
-prosperity and advancement.`;
+      <Section title="Projects">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} {...project} />
+        ))}
+      </Section>
 
-const secondText = `As a Software Architect at Kurago, I help develop a
-Smart Factory solution that enables Bystronic's customers to integrate
-their industrial processes end to end.`;
-
-const thirdText = `We have an extensive cloud experience, focusing mainly on
-Azure to develop SaaS offerings, and also develop very powerful on-premise
-solutions for our most privacy-oriented customers. My tech stack is mainly
-comprised of C#, Python, SQL and Typescript.`;
-
-export default function Home() {
-  return (
-    <Layout title="Home" description="" style={styles}>
-      <HomepageHeader />
-      <main style={styles.main}>
-        <HeroSection
-          parity={true}
-          text={firstText}
-          url="/img/undraw_engineering_team_a7n2.svg"
-        />
-        <HeroSection
-          parity={false}
-          text={secondText}
-          url="/img/undraw_projections.svg"
-        />
-        <HeroSection
-          styling={styles.secondaryHero}
-          parity={true}
-          text={thirdText}
-          url="/img/undraw_cloud_hosting_7xb1.svg"
-        />
-        <Projects />
-      </main>
-    </Layout>
+      <Section title="Research Papers">
+        {papers.map((paper, index) => (
+          <ProjectCard key={index} {...paper} />
+        ))}
+      </Section>
+    </div></>
   );
 }

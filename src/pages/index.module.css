@@ -1,42 +1,100 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
 
-.heroBanner {
-  padding: 4rem 0;
+.header {
   text-align: center;
-  position: relative;
-  overflow: hidden;
-  background-image: url("https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  background-size: cover;
+  margin-bottom: 4rem;
+  padding-top: 1.2rem;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary-darkest);
 }
 
-.buttons {
+.intro {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.description {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary-darker);
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary-darker);
+}
+
+.card p {
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.tagContainer {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.reverseFlex {
-  flex-direction: row-reverse !important;
+.tag {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darkest);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
-.heroText {
-  font-size: 1.3rem;
-  padding: 2.5rem;
+/* Dark mode adjustments */
+[data-theme='dark'] .card {
+  border-color: var(--ifm-color-emphasis-300);
 }
 
-.primaryHero {
-  background: linear-gradient(#141, #393);
-}
-
-.secondaryHero {
-  background: linear-gradient(#114, #339);
+[data-theme='dark'] .tag {
+  background-color: var(--ifm-color-primary-darker);
+  color: var(--ifm-color-emphasis-0);
 }

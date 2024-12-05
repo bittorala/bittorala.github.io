@@ -1,0 +1,66 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--ifm-background-color);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  z-index: 100;
+  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.logo:hover {
+  text-decoration: none;
+  color: var(--ifm-color-primary-darker);
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.link {
+  color: var(--ifm-color-emphasis-700);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.iconLink {
+  color: var(--ifm-color-emphasis-700);
+  transition: color 0.2s ease;
+  line-height: 0;
+  padding: 0.25rem;
+}
+
+.iconLink:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Add some padding to the main content to account for fixed header */
+:global(.main-wrapper) {
+  padding-top: 4rem;
+}
