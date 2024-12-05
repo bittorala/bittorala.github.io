@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbittor_website=self.webpackChunkbittor_website||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Welcome","permalink":"/blog/welcome","unlisted":false,"date":"2023-10-18T00:00:00.000Z"}]}')}}]);
