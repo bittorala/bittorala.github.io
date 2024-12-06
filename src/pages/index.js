@@ -40,13 +40,13 @@ export default function HomePage() {
       title: "StringENT",
       description: "A modified version of ENT, as a benchmark to assess non-randomness qualities of PRNGs with a blazingly fast set of tests that probe for statistical weaknesses",
       tags: ["Cryptography", "Security", "Randomness"],
-      href: "#"
+      href: "https://github.com/bittorala/stringent"
     },
     {
       title: "EASTLite",
       description: "A lightweight Scene Text Detector based on EAST and MobileNets for ultra-fast text detection",
       tags: ["Computer Vision", "AI", "Efficiency"],
-      href: "#"
+      href: "https://github.com/bittorala/east_lite"
     }
   ];
 
