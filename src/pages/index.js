@@ -8,7 +8,7 @@ const ProjectCard = ({ title, description, tags, href }) => (
     whileHover={{ scale: 1.02 }}
     className={styles.card}
   >
-    <a href={href} className={styles.cardLink}>
+    <a href={href} className={styles.cardLink} target="_blank">
       <h3>{title}</h3>
       <p>{description}</p>
       <div className={styles.tagContainer}>

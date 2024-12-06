@@ -16,6 +16,7 @@
   --ifm-code-font-size: 95%;
   --ifm-card-background-color: ghostwhite;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-link-hover-decoration: none;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
