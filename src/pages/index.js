@@ -70,7 +70,7 @@ export default function HomePage() {
       <Navigation />
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1>Bittor Alaña - Software Architect</h1>
+          <h1>Bittor Alaña - Senior Software Engineer</h1>
           <div className={styles.imgHolder}>
             <img src="/img/bittor.jpeg" alt="Bittor Alaña at Icod de los Vinos (beautiful town btw)" />
           </div>
@@ -82,7 +82,7 @@ export default function HomePage() {
           className={styles.header}
         >
           <p className={styles.intro}>
-            I am Bittor Alaña Olivares, a Software Architect from Bilbao, Basque Country. I hold joint
+            I am Bittor Alaña Olivares, a Senior Software Engineer from Bilbao, Basque Country. I hold joint
             Bachelor's degrees Mathematics and Computer Science from Universidad Complutense de Madrid,
             as well as an MSc in Computational Engineering and Mathematics from Universitat Rovira i Virgili.
             When I'm not doing software, AI or maths, I enjoy hiking, reading, cooking and kickboxing.
