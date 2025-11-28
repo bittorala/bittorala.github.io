@@ -88,15 +88,10 @@ export default function HomePage() {
             When I'm not doing software, AI or maths, I enjoy hiking, reading, cooking and kickboxing.
           </p>
           <p className={styles.description}>
-            I have been working at Bystronic Software (formerly Kurago Software) since 2020. I started off
-            as a Software Engineer, had a short tenure as Scrum Master, and have been a Software Architect
-            in its Technology Office ever since.
-          </p>
-          <p className={styles.description}>
-            At Bystronic Software, we develop a comprehensive software ecosystem that drives Bystronic's
-            Smart Factory. We combine Azure-based SaaS products with on-premise software running at the lowest
-            level, for a simplified and integrated workflow that helps digitalize sheet metal manufacturing.
-            My tech stack mainly consists of (but is not limited to) C#, Python, SQL and Typescript.
+            I work as a Senior Backend Engineer at envelio GmbH, where we provide software solutions for Distribution
+            System Operators to enable the vision of smart grids.
+            Prior to my role in envelio, I worked for Bystronic Software (formerly Kurago Software), serving as
+            a Full-Stack Engineer, Data Engineer, Scrum Master and Software Architect throughout the years.
           </p>
           <p className={styles.description}>
             My research interests include <strong>Deep Learning</strong> and <strong>Cryptography</strong>.
