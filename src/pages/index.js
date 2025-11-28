@@ -47,8 +47,13 @@ export default function HomePage() {
       description: "A lightweight Scene Text Detector based on EAST and MobileNets for ultra-fast text detection",
       tags: ["Computer Vision", "AI", "Efficiency"],
       href: "https://github.com/bittorala/east_lite"
-    }
-  ];
+    },
+    {
+      title: "mdformat-vscode",
+      description: "Unofficial VS Code plugin for mdformat",
+      tags: ["Markdown", "VS Code", "Formatter"],
+      href: "https://github.com/bittorala/mdformat-vscode"
+    }];
 
   const papers = [
     {
@@ -63,7 +68,6 @@ export default function HomePage() {
       tags: ["Cryptography", "Randomness", "NIST"],
       href: "https://doi.org/10.1016/j.amc.2023.128222"
     }];
-
 
   return (
     <>
